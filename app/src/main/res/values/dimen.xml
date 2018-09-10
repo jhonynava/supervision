@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="borde">10dp</dimen>
+    <dimen name="bordeImg">10dp</dimen>
+    <dimen name="bordeImgBottom">55dp</dimen>
+    <dimen name="bordeImgBottom_celular">20dp</dimen>
+    <dimen name="borde_celular">15dp</dimen>
+    <dimen name="ancho_img_tablet">200dp</dimen>
+    <dimen name="ancho_img_celular">150dp</dimen>
+    <dimen name="ancho_edittextuser_tablet">280dp</dimen>
+    <dimen name="tamaño_btn_login">150dp</dimen>
+    <dimen name="tamaño_letra_login">15sp</dimen>
+    <dimen name="tamaño_celular_userpass">35dp</dimen>
+    <dimen name="tamaño_tablet_userpass">45dp</dimen>
+    <dimen name="borde_horizontal">20dp</dimen>
+</resources>

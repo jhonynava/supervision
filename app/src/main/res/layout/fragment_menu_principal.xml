@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_principal">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_tlaxcala" />
+
+        <Button
+            android:id="@+id/btn_iniciar_supervison"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:text="Iniciar Supervisión" />
+
+        <Button
+            android:id="@+id/btn_continuar_supervison"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:text="Continuar Supervisión"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_lista_supervisiones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:text="Lista de Supervisiones" />
+
+        <Button
+            android:id="@+id/btn_imprimir_cedula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:text="Imprimir cedula" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/descripcion_img"
+        android:src="@drawable/logotipo_secretaria_de_salud" />
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="@string/descripcion_img"
+        android:src="@drawable/repss" />
+
+</FrameLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="@android:style/Theme.Holo.Dialog">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icons8_google_web_search_50"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/poliza"
+            android:id="@+id/text_test1"
+            android:textSize="20sp"
+            android:textColor="#ffffffff"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edt_folio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:hint="@string/hint_ingresaPoliza"
+        android:inputType="numberSigned"
+        android:lines="1"
+        android:padding="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:maxLength="10"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buscar_folio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/buscar"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

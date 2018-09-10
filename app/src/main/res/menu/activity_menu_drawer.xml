@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_principal"
+            android:icon="@drawable/ic_informe"
+            android:title="Menú Principal" />
+    </group>
+
+    <item android:title="Opciones">
+        <menu >
+            <item
+                android:id="@+id/hallazgos"
+                android:icon="@drawable/ic_checklist"
+                android:title="Configuraciones" />
+            <item
+                android:id="@+id/seguimientos"
+                android:icon="@drawable/ic_checklist"
+                android:title="Cerrar Sesión" />
+        </menu>
+
+    </item>
+
+</menu>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modulo">
+
+    <LinearLayout
+        android:id="@+id/layout_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_logo_modulo"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="@string/descripcion_img"
+            android:src="@drawable/logo_tlaxcala" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_modulo"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_modulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tamaño_celular_userpass"
+            android:layout_marginRight="@dimen/tamaño_celular_userpass"
+            android:clickable="true"
+            android:ems="10"
+            android:focusableInTouchMode="false"
+            android:gravity="start|top"
+            android:hint="Selecciona" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/texto_encargado"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_encargado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tamaño_celular_userpass"
+            android:layout_marginRight="@dimen/tamaño_celular_userpass"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:gravity="start|top"
+            android:hint="Selecciona" />
+
+        <Button
+            android:id="@+id/btn_ingresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aceptar" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/descripcion_img"
+        android:src="@drawable/logotipo_secretaria_de_salud" />
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="@string/descripcion_img"
+        android:src="@drawable/repss" />
+
+
+</FrameLayout>

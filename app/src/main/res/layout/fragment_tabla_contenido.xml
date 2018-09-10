@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/borde"
+    tools:context=".tabla_contenido">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gris_claro"
+            android:gravity="center_horizontal"
+            android:text="Cedula de Supervisión en Módulo de Afiliación y Orientación / Brigada "
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <HorizontalScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="1">
+
+
+                    <TableRow android:background="@color/gris_claro">
+
+                        <TextView
+                            android:layout_column="0"
+                            android:padding="3dip"
+                            android:text="No."
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_column="1"
+                            android:padding="3dip"
+                            android:text="Rubros"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="270dp"
+                            android:layout_column="2"
+                            android:padding="3dip"
+                            android:text="Variables de Observacion"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_column="3"
+                            android:padding="3dip"
+                            android:text="SI  "
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_column="4"
+                            android:padding="3dip"
+                            android:text="NO   "
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_column="5"
+                            android:padding="3dip"
+                            android:text="Observaciones"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layoutDirection="rtl"
+                            android:padding="3dip"
+                            android:text="1. El operador informa los requisitos para llevar a cabo su trámite (cuenta con otra seguridad social)." />
+
+                        <TextView
+                            android:id="@+id/r1v1c3_Si"
+                            android:layout_column="3"
+                            android:padding="3dip" />
+
+                        <TextView
+                            android:id="@+id/r1v1c4_No"
+                            android:layout_column="4"
+                            android:padding="3dip" />
+
+                        <TextView
+                            android:id="@+id/r1v1c5_Observacion"
+                            android:layout_width="wrap_content"
+                            android:layout_column="5"
+                            android:padding="3dip" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dip"
+                            android:text="2. Explica cuáles son los documentos incluyendo los supletorios." />
+
+                        <TextView
+                            android:id="@+id/r1v2c3_Si"
+                            android:layout_column="3"
+                            android:padding="3dip" />
+
+                        <TextView
+                            android:id="@+id/r1v2c4_No"
+                            android:layout_column="3"
+                            android:padding="3dip" />
+
+                        <TextView
+                            android:id="@+id/r1v2c5_Observacion"
+                            android:layout_column="3"
+                            android:padding="3dip" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dip"
+                            android:text="3. El solicitante entrega completos sus documentos." />
+
+                        <TextView
+                            android:id="@+id/r1v3c3_Si"
+                            android:layout_column="3"
+                            android:padding="3dip" />
+
+                        <TextView
+                            android:id="@+id/r1v3c4_No"
+                            android:layout_column="4"
+                            android:padding="3dip" />
+
+                        <TextView
+                            android:id="@+id/r1v3c5_Observacion"
+                            android:layout_column="5"
+                            android:padding="3dip" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="4. El operador explica los procesos a seguir en caso de no reunir la documentación." />
+
+                        <TextView
+                            android:id="@+id/r1v4c3_Si"
+                            android:layout_column="3"
+                            android:padding="3dp" />
+
+                        <TextView
+                            android:id="@+id/r1v4c4_No"
+                            android:layout_column="4"
+                            android:padding="3dp" />
+
+                        <TextView
+                            android:id="@+id/r1v4c5_Observacion"
+                            android:layout_column="5"
+                            android:padding="3dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dip"
+                            android:text="5. Verifica el operador en la herramienta del SAP la Derechohabiencia." />
+
+                        <TextView
+                            android:id="@+id/r1v5c3_Si"
+                            android:layout_column="3"
+                            android:padding="3dp" />
+
+                        <TextView
+                            android:id="@+id/r1v5c4_No"
+                            android:layout_column="4"
+                            android:padding="3dp" />
+
+                        <TextView
+                            android:id="@+id/r1v5c5_Observacion"
+                            android:layout_column="4"
+                            android:padding="3dp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dip"
+                            android:text="6. El operador coteja documentos e integra expediente físico en orden." />
+
+                        <TextView
+                            android:id="@+id/r1v6c3_Si"
+                            android:layout_column="3"
+                            android:padding="3dip" />
+
+                        <TextView
+                            android:id="@+id/r1v6c4_No"
+                            android:layout_column="4"
+                            android:padding="3dp" />
+
+                        <TextView
+                            android:id="@+id/r1v6c5_Observacion"
+                            android:layout_column="5"
+                            android:padding="3dp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dip"
+                            android:text="7. Conoce el procedimiento para digitalización de expedientes." />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_column="3"
+                            android:padding="3dip" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dip"
+                            android:text="8. Se explica al (los) interesados como se conforma el núcleo familiar y quien puede fungir como titular de la póliza." />
+
+                        <TextView />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="9. El operador registra los datos de los beneficiarios en el SAP, en particular toma en consideración analizar si es un caso específico (menores de 5 años, recién nacidos, mujeres embarazadas o adultos mayores)." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="10. Se explica al titular la posibilidad de que exista un titular no beneficiario, en los casos donde se advierta que cuenta con Derechohabiencia y quienes pueden ser beneficiarios." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="11. El operador solicita todos los datos de cada módulo que integra la CECASOEH." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="12. El operador aplica la totalidad de las preguntas para el llenado de la CECASOEH." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="13. Conoce el procedimiento para requisitar CECASOEH en equipo de cómputo (en línea)." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="14. Conoce el procedimiento para requisitar CECASOEH fuera de línea." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="15. Solicita al interesado la firma en la CECASOEH." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="16. Se solicita al interesado revisar la información capturada en su CECASOEH y se corrobora que esté de acuerdo antes de firmarla." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="17. Se informa al interesado en que régimen contributivo se encuentra y los procedimientos a seguir según aplique." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="18. Se informa al interesado los periodos que abarca la vigencia de su póliza." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="19. Se explica el tipo de vigencia otorgada según sea el caso." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="19.1 El personal de MAO entrega al afiliado: 1.-Póliza, 2.-Carta de Derechos y Obligaciones, 3.- Recibo de pago y/o formato de expediente incompleto (si aplica)" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="19.2 Solicita la firma en la Póliza de Afiliación." />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:padding="3dp"
+                            android:text="" />
+                    </TableRow>
+
+                    <View
+                        android:layout_height="2dip"
+                        android:background="#FF909090" />
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

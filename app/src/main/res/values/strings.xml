@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Supervisión</string>
+    <string name="todo">TODO</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_contrasenia">Contraseña</string>
+    <string name="texto_login">Iniciar Sesión</string>
+    <string name="mensaje_error">Error de conexión de base de datos</string>
+    <string name="conexion_exito">Bienvenido</string>
+    <string name="error_conexion">Error de Conexión con la Base de Datos</string>
+    <string name="error_login">Ingresa el Usuario o Contraseña</string>
+    <string name="error_userpass">Error de usuario y contraseña</string>
+    <string name="contraseña_vacia">El campo contraseña es requerido</string>
+    <string name="usuario_vacio">El campo usuario es requerido</string>
+    <string name="title_activity_menu">Cedula de Supervisión</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="variable_nombres">NOMBRES</string>
+    <string name="salir">Cerrar Sesión</string>
+    <string name="supervisor">Supervisor</string>
+    <string name="nombre_supervisor">JHONATTAN ROMANO NAVA</string>
+    <string name="texto_menuPrincipal">Cedula de Supervisión en Módulo de Afiliación y Orientación / Brigada</string>
+    <string name="rubro1">Procedimiento de A. o R.</string>
+    <string name="rubro2">Revisión de expedientes</string>
+    <string name="rubro3">Visitas domiciliarias</string>
+    <string name="rubro4">Gasto de operación</string>
+    <string name="descripcion_img">Logo</string>
+    <string name="texto_modulo">Seleccionar Modulo</string>
+    <string name="texto_encargado">Seleccionar Encargado</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="recordar_pass">Recordar Contraseña</string>
+    <string name="variables">1.- El operador informa los requisitos para llevar a cabo su trámite (cuenta con otra seguridad social).</string>
+    <string name="nombre_variable">variable</string>
+    <string name="obsercavion_vacia">Escribe la observación</string>
+    <string name="poliza">Buscar Poliza</string>
+    <string name="hint_ingresaPoliza">Ingresa el folio</string>
+    <string name="buscar">Buscar</string>
+    <string name="buscar_poliza">Buscar Poliza</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

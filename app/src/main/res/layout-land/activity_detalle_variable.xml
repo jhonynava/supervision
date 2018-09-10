@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detalle_variable"
+    android:background="@drawable/fondo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_Nombre_Variable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/variables"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#263238"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn_yes"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/img_btn_yes"
+                    android:background="@null"
+                    android:scaleType="centerInside"/>
+
+                <ImageButton
+                    android:id="@+id/btn_no"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/img_btn_no"
+                    android:background="@null"
+                    android:scaleType="centerInside"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_observacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#b0bec5"
+                android:hint="Agregar comentario"
+                android:lines="3"
+                android:gravity="top|start"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_guardar"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Guardar"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
