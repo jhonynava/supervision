@@ -140,7 +140,7 @@ public class fragment_RV_Afiliacion extends android.support.v4.app.Fragment impl
             } catch (Exception e) {
 
             }
-            return null;
+
         }
 
         @Override
