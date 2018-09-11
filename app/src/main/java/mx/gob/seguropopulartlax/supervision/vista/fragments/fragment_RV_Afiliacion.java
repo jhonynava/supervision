@@ -1,4 +1,4 @@
-package mx.gob.seguropopulartlax.supervision.fragments;
+package mx.gob.seguropopulartlax.supervision.vista.fragments;
 
 
 import android.app.ProgressDialog;
@@ -24,43 +24,39 @@ import mx.gob.seguropopulartlax.supervision.ConnectionClass;
 import mx.gob.seguropopulartlax.supervision.R;
 import mx.gob.seguropopulartlax.supervision.POJOs.VariablesPOJO;
 import mx.gob.seguropopulartlax.supervision.adaptadores.AfiliciacionReafiliacionAdaptador;
+import mx.gob.seguropopulartlax.supervision.presentador.IRV_Presentador_AfiliacionReafiliacion;
+import mx.gob.seguropopulartlax.supervision.presentador.RV_Presentador_AfiliacionReafiliacion;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class fragment_RV_Afiliacion extends android.support.v4.app.Fragment {
+public class fragment_RV_Afiliacion extends android.support.v4.app.Fragment implements IRV_Vista_fragmentAfiliacionReafiliacion {
 
     ConnectionClass conn = new ConnectionClass();
     Connection conexion = null;
     ArrayList<VariablesPOJO> variables = new ArrayList<>();
     ArrayList<String> variablesList;
     private RecyclerView listaVariables;
-    public AfiliciacionReafiliacionAdaptador adaptador;
     ResultSet rst;
     VariablesPOJO variable = null;
     private ProgressDialog proceso;
-    private cargarDatosTask mAuthTask;
+    //private cargarDatosTask mAuthTask;
     Button btn_siguiente;
+    private IRV_Presentador_AfiliacionReafiliacion presentador_afiliacionReafiliacion;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        this.getActivity().setTitle(getResources().getString(R.string.rubro1));
-
-        proceso = new ProgressDialog(getContext());
 
         View v = inflater.inflate(R.layout.fragment_rv_afilicacion, container, false);
         listaVariables = v.findViewById(R.id.rvVariablesAfiliacion);
         btn_siguiente = v.findViewById(R.id.btn_siguente_fragment);
 
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        this.getActivity().setTitle(getResources().getString(R.string.rubro1));
+        proceso = new ProgressDialog(getContext());
 
-        listaVariables.setLayoutManager(llm);
-        listaVariables.setHasFixedSize(true);
-        listaVariables.setItemAnimator(new DefaultItemAnimator());
-        cargarDatos();
+        presentador_afiliacionReafiliacion = new RV_Presentador_AfiliacionReafiliacion(this, getContext());
 
         btn_siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,11 +90,24 @@ public class fragment_RV_Afiliacion extends android.support.v4.app.Fragment {
         alert.show();
     }
 
-    private void inicializarAdaptador() {
-        adaptador = new AfiliciacionReafiliacionAdaptador(variables, getActivity());
-        listaVariables.setAdapter(adaptador);
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listaVariables.setLayoutManager(llm);
     }
 
+    @Override
+    public AfiliciacionReafiliacionAdaptador crearAdaptador(ArrayList<VariablesPOJO> variables) {
+        AfiliciacionReafiliacionAdaptador adaptador = new AfiliciacionReafiliacionAdaptador(variables, getActivity());
+        return adaptador;
+    }
+
+    @Override
+    public void inicializarAdaptadorRV(AfiliciacionReafiliacionAdaptador adaptador) {
+        listaVariables.setAdapter(adaptador);
+    }
+/*
     public class cargarDatosTask extends AsyncTask<Void, Void, Boolean>{
 
         public cargarDatosTask() {
@@ -144,7 +153,7 @@ public class fragment_RV_Afiliacion extends android.support.v4.app.Fragment {
         }
         @Override
         protected void onPostExecute(Boolean aBoolean) {
-            inicializarAdaptador();
+
             proceso.dismiss();
         }
 
@@ -157,5 +166,5 @@ public class fragment_RV_Afiliacion extends android.support.v4.app.Fragment {
     private void cargarDatos() {
         mAuthTask = new cargarDatosTask();
         mAuthTask.execute((Void) null);
-    }
+    } */
 }

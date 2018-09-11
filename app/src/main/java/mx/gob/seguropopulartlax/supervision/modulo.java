@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
 import in.galaxyofandroid.spinerdialog.SpinnerDialog;
 import mx.gob.seguropopulartlax.supervision.POJOs.UsuarioPOJO;
-import mx.gob.seguropopulartlax.supervision.fragments.fragment_RV_Afiliacion;
+import mx.gob.seguropopulartlax.supervision.vista.fragments.fragment_RV_Afiliacion;
 
 import static android.content.Context.MODE_PRIVATE;
 

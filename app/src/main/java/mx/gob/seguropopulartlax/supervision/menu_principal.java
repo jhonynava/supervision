@@ -9,8 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import mx.gob.seguropopulartlax.supervision.db.BaseDatos;
-import mx.gob.seguropopulartlax.supervision.fragments.RV_VDomiciliaria;
+import mx.gob.seguropopulartlax.supervision.vista.fragments.RV_VDomiciliaria;
 
 import static android.content.Context.MODE_PRIVATE;
 

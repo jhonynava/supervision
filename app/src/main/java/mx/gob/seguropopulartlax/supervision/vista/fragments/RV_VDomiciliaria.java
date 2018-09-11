@@ -1,4 +1,4 @@
-package mx.gob.seguropopulartlax.supervision.fragments;
+package mx.gob.seguropopulartlax.supervision.vista.fragments;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
