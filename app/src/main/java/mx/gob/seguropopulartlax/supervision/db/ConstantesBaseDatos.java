@@ -7,8 +7,6 @@ public final class ConstantesBaseDatos {
 
     public static final String NAME_TABLE_USUARIO = "Usuario";
     public static final String NAME_TABLE_AREA_SUPERVISION = "Area_Supervision";
-    public static final String NAME_TABLE_RUBRO = "Rubro";
-    public static final String NAME_TABLE_VARIABLE = "Variable";
     public static final String NAME_TABLE_OBSERVACION = "Observacion";
     public static final String NAME_TABLE_LIKES = "Likes";
 
@@ -26,14 +24,6 @@ public final class ConstantesBaseDatos {
     public static final String TABLE_ENCARGADO = "encargado";
     public static final String TABLE_FECHA = "fecha";
 
-    //Tabla Rubro
-    public static final String TABLE_ID_RUBRO = "id_rubro";
-    public static final String TABLE_RUBRO = "rubro";
-
-    //Tabla Variable
-    public static final String TABLE_ID_VARIABLE = "id_variable";
-    public static final String TABLE_VARIABLE = "variable";
-
     //Tabla Observacion
     public static final String TABLE_ID_OBSERVACION = "id_observacion";
     public static final String TABLE_OBSERVACION = "observacion";
@@ -44,10 +34,10 @@ public final class ConstantesBaseDatos {
     public static final String TABLE_POSICION =  "posicion";
 
     // ----- Datos internos de la aplicación ------//
-    public static final String NAME_TABLE_MAO = "Mao";
-    public static final String NAME_TABLE_USUARIOS = "Usarios";
-    public static final String NAME_TABLE_CEDULA = "Cedula";
-
+    public static final String NAME_TABLE_MAO = "CAT_Mao";
+    public static final String NAME_TABLE_USUARIOS = "CAT_Usarios";
+    public static final String NAME_TABLE_RUBRO = "CAT_Rubro";
+    public static final String NAME_TABLE_VARIABLE = "CAT_Variable";
 
     //Tabla MAO
     public static final String TABLE_ID_MAO  = "id_mao";
@@ -59,5 +49,12 @@ public final class ConstantesBaseDatos {
     public static final String TABLE_SUPERVISOR = "supervisor";
     public static final String TABLE_ID_SUPER = "id_super";
 
-    //Tabla Cedula
+    //Tabla Rubro
+    public static final String TABLE_ID_RUBRO = "id_rubro";
+    public static final String TABLE_RUBRO = "rubro";
+
+    //Tabla Variable
+    public static final String TABLE_ID_VARIABLE = "id_variable";
+    public static final String TABLE_VARIABLE = "variable";
+
 }

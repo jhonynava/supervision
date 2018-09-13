@@ -1,6 +1,5 @@
 package mx.gob.seguropopulartlax.supervision.vista.fragments;
 
-
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
@@ -26,7 +25,6 @@ import mx.gob.seguropopulartlax.supervision.POJOs.VariablesPOJO;
 import mx.gob.seguropopulartlax.supervision.adaptadores.AfiliciacionReafiliacionAdaptador;
 import mx.gob.seguropopulartlax.supervision.presentador.IRV_Presentador_AfiliacionReafiliacion;
 import mx.gob.seguropopulartlax.supervision.presentador.RV_Presentador_AfiliacionReafiliacion;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -77,7 +75,7 @@ public class fragment_RV_Afiliacion extends android.support.v4.app.Fragment impl
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Fragment fragment = new RV_Expedientes();
-                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_main,fragment).commit();
+                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).commit();
                     }
                 })
                 .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
