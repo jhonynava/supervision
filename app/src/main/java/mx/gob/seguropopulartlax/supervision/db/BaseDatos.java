@@ -131,7 +131,7 @@ public class BaseDatos extends SQLiteOpenHelper {
     }
 
     public void insertarValorLikes(ContentValues contentValues) {
-        SQLiteDatabase db = this.getWritableDatabase();
+         SQLiteDatabase db = this.getWritableDatabase();
         db.insert(ConstantesBaseDatos.NAME_TABLE_LIKES, null, contentValues);
         db.close();
     }

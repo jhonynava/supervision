@@ -10,9 +10,8 @@ public class VariablesPOJO {
     String comentario;
     int Foto;
     int img_like;
-    int img_dislike;
 
-    public VariablesPOJO(int id_rubro, String nombre_rubro, String variable, String respuesta_like, String respuesta_dislike, String comentario, int foto) {
+    public VariablesPOJO(int id_rubro, String nombre_rubro, String variable, String respuesta_like, String respuesta_dislike, String comentario, int foto, int img_like, int img_dislike, Boolean valor_like) {
         this.id_rubro = id_rubro;
         this.nombre_rubro = nombre_rubro;
         this.variable = variable;
@@ -20,7 +19,21 @@ public class VariablesPOJO {
         this.respuesta_dislike = respuesta_dislike;
         this.comentario = comentario;
         Foto = foto;
+        this.img_like = img_like;
+        this.img_dislike = img_dislike;
+        this.valor_like = valor_like;
     }
+
+    public Boolean getValor_like() {
+        return valor_like;
+    }
+
+    public void setValor_like(Boolean valor_like) {
+        this.valor_like = valor_like;
+    }
+
+    int img_dislike;
+    Boolean valor_like;
 
     public int getFoto() {
         return Foto;

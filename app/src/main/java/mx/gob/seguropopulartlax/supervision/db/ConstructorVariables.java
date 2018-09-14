@@ -59,16 +59,15 @@ public class ConstructorVariables {
         db.insertarValorCAT_Variable(contentValues);
     }
 
-    /*
-
-    public void insertarLike(VariablesPOJO variablesPOJO, int id_usuario, Boolean valor_like, int id_area_supervision, int id_vairable){
+    public void insertarLike(VariablesPOJO variablesPOJO, int id_usuario, Boolean valor_like, int id_area_supervision, int id_vairable, int id_rubro){
         BaseDatos db = new BaseDatos(context);
         ContentValues contentValues = new ContentValues();
-        contentValues.put(ConstantesBaseDatos.TABLE_ID_USUARIO, );
-        contentValues.put(ConstantesBaseDatos.TABLE_VALOR, );
-        contentValues.put(ConstantesBaseDatos.TABLE_ID_AREA_SUPERVISION, );
-        contentValues.put(ConstantesBaseDatos.TABLE_ID_VARIABLE, );
-        contentValues.put(ConstantesBaseDatos.TABLE_ID_RUBRO, );
+        contentValues.put(ConstantesBaseDatos.TABLE_ID_USUARIO, id_usuario);
+        contentValues.put(ConstantesBaseDatos.TABLE_VALOR, valor_like);
+        contentValues.put(ConstantesBaseDatos.TABLE_ID_AREA_SUPERVISION, id_area_supervision);
+        contentValues.put(ConstantesBaseDatos.TABLE_ID_VARIABLE, id_vairable);
+        contentValues.put(ConstantesBaseDatos.TABLE_ID_RUBRO, variablesPOJO.getId_rubro());
+        db.insertarValorLikes(contentValues);
     }
-    */
+
 }

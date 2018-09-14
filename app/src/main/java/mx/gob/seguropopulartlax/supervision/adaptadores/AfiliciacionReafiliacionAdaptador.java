@@ -20,12 +20,15 @@ import java.util.ArrayList;
 import mx.gob.seguropopulartlax.supervision.R;
 import mx.gob.seguropopulartlax.supervision.POJOs.VariablesPOJO;
 import mx.gob.seguropopulartlax.supervision.db.BaseDatos;
+import mx.gob.seguropopulartlax.supervision.db.ConstantesBaseDatos;
+import mx.gob.seguropopulartlax.supervision.db.ConstructorVariables;
 
 public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<AfiliciacionReafiliacionAdaptador.VariablesViewHolder> {
 
 
     ArrayList<VariablesPOJO> variables;
     public Activity activty;
+    ConstructorVariables constructorVariables;
 
     @Override
     public int getItemViewType(int position) {
@@ -46,7 +49,7 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
 
     @Override
     public void onBindViewHolder(@NonNull final AfiliciacionReafiliacionAdaptador.VariablesViewHolder vaiablesViewHolder, final int position) {
-        final BaseDatos db = new BaseDatos(activty);
+        constructorVariables = new ConstructorVariables(activty);
         final VariablesPOJO variable = variables.get(position);
         final String respuesta = variable.getVariable();
         final String respuesraLike = variable.getRespuesta_like();
@@ -97,21 +100,6 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
                                 variable.setComentario("");
                                 Toast.makeText(activty, "La observación anterior ha sido eliminada", Toast.LENGTH_SHORT).show();
                             }
-
-                            /*
-                            ContentValues contentValues = new ContentValues();
-                            contentValues.put(ConstantesBaseDatos.TABLE_ID_USUARIO,1);
-                            contentValues.put(ConstantesBaseDatos.TABLE_ID_RUBRO, 1);
-                            contentValues.put(ConstantesBaseDatos.TABLE_ID_VARIABLE,position+1);
-                            contentValues.put(ConstantesBaseDatos.TABLE_RUBRO,"");
-                            contentValues.put(ConstantesBaseDatos.TABLE_VARIABLE,respuesta);
-                            contentValues.put(ConstantesBaseDatos.TABLE_RESPUESTA,true);
-                            contentValues.put(ConstantesBaseDatos.TABLE_OBSERVACION, "");
-                            contentValues.put(ConstantesBaseDatos.TABLE_MODULO,"");
-                            contentValues.put(ConstantesBaseDatos.TABLE_ENCARGADO,"");
-                            db.insertarValorCedula(contentValues); */
-
-
                             dialog.cancel();
                             valor_respuesta[0] = 1;
                             numero_respuesta[position] = respuesraLike;
@@ -128,6 +116,7 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
                 } else if (valor1.equals("1")) {
                     Toast.makeText(activty, "Ya haz seleccionado la respuesta", Toast.LENGTH_SHORT).show();
                 } else if (valor1.isEmpty()) {
+                    constructorVariables.insertarLike(variable,1,true,21, position,1);
                     variable.setRespuesta_like("1");
                     vaiablesViewHolder.img_like.setImageResource(R.drawable.icons_like_fill);
                     final String respuestaLike = variable.getRespuesta_like();
@@ -331,7 +320,7 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
             img_comentario = itemView.findViewById(R.id.img_comentario);
             img_like = itemView.findViewById(R.id.img_like);
             img_dislike = itemView.findViewById(R.id.img_dislike);
-
+            this.setIsRecyclable(false);
         }
     }
 }
