@@ -320,7 +320,7 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
             img_comentario = itemView.findViewById(R.id.img_comentario);
             img_like = itemView.findViewById(R.id.img_like);
             img_dislike = itemView.findViewById(R.id.img_dislike);
-            this.setIsRecyclable(false);
+            this.setIsRecyclable(true);
         }
     }
 }
