@@ -14,9 +14,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
+
 import mx.gob.seguropopulartlax.supervision.R;
 import mx.gob.seguropopulartlax.supervision.POJOs.VariablesPOJO;
 import mx.gob.seguropopulartlax.supervision.db.BaseDatos;
@@ -28,7 +32,8 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
 
     ArrayList<VariablesPOJO> variables;
     public Activity activty;
-    ConstructorVariables constructorVariables;
+    ConstructorVariables
+            constructorVariables;
 
     @Override
     public int getItemViewType(int position) {
@@ -58,8 +63,8 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
         final int foto = variable.getFoto();
         final int[] valor_respuesta = {0};
         final String[] numero_respuesta = new String[variables.size()];
-        final int img_like =  variable.getImg_like();
-        final int img_dislike =  variable.getImg_dislike();
+        final int img_like = variable.getImg_like();
+        final int img_dislike = variable.getImg_dislike();
 
         vaiablesViewHolder.texto_like.setText(respuesraLike);
         vaiablesViewHolder.texto_dislike.setText(respuetsaDislike);
@@ -116,7 +121,7 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
                 } else if (valor1.equals("1")) {
                     Toast.makeText(activty, "Ya haz seleccionado la respuesta", Toast.LENGTH_SHORT).show();
                 } else if (valor1.isEmpty()) {
-                    constructorVariables.insertarLike(variable,1,true,21, position,1);
+                    constructorVariables.insertarLike(variable, 1, true, 21, position, 1);
                     variable.setRespuesta_like("1");
                     vaiablesViewHolder.img_like.setImageResource(R.drawable.icons_like_fill);
                     final String respuestaLike = variable.getRespuesta_like();
@@ -180,6 +185,13 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
                     valor_respuesta[0] = 1;
                     numero_respuesta[position] = respuestaDislike;
                 }
+            }
+        });
+
+        vaiablesViewHolder.radioGroup_respuestas.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
             }
         });
 
@@ -309,6 +321,7 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
         private ImageView like, dislike;
         private ImageButton img_comentario;
         private ImageView img_like, img_dislike;
+        private RadioGroup radioGroup_respuestas;
 
         public VariablesViewHolder(final View itemView) {
             super(itemView);
@@ -320,7 +333,7 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
             img_comentario = itemView.findViewById(R.id.img_comentario);
             img_like = itemView.findViewById(R.id.img_like);
             img_dislike = itemView.findViewById(R.id.img_dislike);
-            this.setIsRecyclable(true);
+            radioGroup_respuestas = itemView.findViewById(R.id.radio_group_respuestas);
         }
     }
 }

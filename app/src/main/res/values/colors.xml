@@ -8,5 +8,5 @@
     <color name="blanco">#FFF</color>
     <color name="likeOn">#15791e</color>
     <color name="dislikeOn">#9b0000</color>
-    <color name="off">#616161</color>
+    <color name="off">#a9a9a9</color>
 </resources>

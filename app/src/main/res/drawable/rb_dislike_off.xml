@@ -4,14 +4,16 @@
         <shape android:shape="rectangle">
             <corners
                 android:bottomRightRadius="10dp"
-                android:topRightRadius="10dp"/>
+                android:topRightRadius="10dp"
+                android:bottomLeftRadius="10dp"
+                android:topLeftRadius="10dp"/>
             <solid android:color="@color/off" />
         </shape>
     </item>
     <item
         android:bottom="10dp"
         android:drawable="@drawable/dislike"
-        android:left="10dp"
-        android:right="10dp"
+        android:left="20dp"
+        android:right="20dp"
         android:top="10dp" />
 </layer-list>

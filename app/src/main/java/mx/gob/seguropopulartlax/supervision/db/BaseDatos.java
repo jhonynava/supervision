@@ -22,15 +22,15 @@ public class BaseDatos extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String queryCrearTablaUsuario = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_USUARIO + "(" +
-                ConstantesBaseDatos.TABLE_ID_USUARIO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                ConstantesBaseDatos.TABLE_CURP + " VARCHAR(18), " +
-                ConstantesBaseDatos.TABLE_PASSWORD + " VARCHAR(20), " +
-                ConstantesBaseDatos.TABLE_NOMBRE + " VARCHAR(50), " +
-                ConstantesBaseDatos.TABLE_APATERNO + " VARCHAR(50), " +
-                ConstantesBaseDatos.TABLE_AMATERNO + " VARCHAR(50)" +
+        String queryCrearTablaListaSupervisiones = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_LISTA_SUPERVISIONES + "(" +
+                ConstantesBaseDatos.TABLE_ID_LISTA_SUPERVISION +  " INTEGER, " +
+                ConstantesBaseDatos.TABLE_ID_AREA_SUPERVISION +  
+                ConstantesBaseDatos.TABLE_ID_USUARIO +
+                ConstantesBaseDatos.TABLE_SUPERVISOR +
+                ConstantesBaseDatos.TABLE_NO_POLIZA +
+                ConstantesBaseDatos.TABLE_TITULAR_POLIZA +
+                ConstantesBaseDatos.TABLE_REALIZA_POLIZA +
                 ")";
-        db.execSQL(queryCrearTablaUsuario);
 
         String queryCrearTablaAreaSupervision = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_AREA_SUPERVISION + "(" +
                 ConstantesBaseDatos.TABLE_ID_AREA_SUPERVISION + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -67,6 +67,18 @@ public class BaseDatos extends SQLiteOpenHelper {
                 ")";
         db.execSQL(queryCrearTablaLikes);
 
+        String queryCrearTablaCAT_Usuarios = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_USUARIO + "(" +
+                ConstantesBaseDatos.TABLE_ID_USUARIO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                ConstantesBaseDatos.TABLE_CURP + " VARCHAR(18), " +
+                ConstantesBaseDatos.TABLE_PASSWORD + " VARCHAR(20), " +
+                ConstantesBaseDatos.TABLE_NOMBRE + " VARCHAR(50), " +
+                ConstantesBaseDatos.TABLE_APATERNO + " VARCHAR(50), " +
+                ConstantesBaseDatos.TABLE_AMATERNO + " VARCHAR(50), " +
+                ConstantesBaseDatos.TABLE_SUPERVISOR + " BOOLEAN, " +
+                ConstantesBaseDatos.TABLE_ID_SUPERVISOR + " SMALLINT" +
+        ")";
+        db.execSQL(queryCrearTablaCAT_Usuarios);
+
         String queryCrearTablaCAT_MAO = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_MAO + "(" +
                 ConstantesBaseDatos.TABLE_ID_MAO + " INTEGER PRIMARY KEY, " +
                 ConstantesBaseDatos.TABLE_MAO + " VARCHAR(100), " +
@@ -75,16 +87,6 @@ public class BaseDatos extends SQLiteOpenHelper {
                 ")";
         db.execSQL(queryCrearTablaCAT_MAO);
 
-        String queryCrearTablaCAT_USER = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_USUARIOS + "(" +
-                ConstantesBaseDatos.TABLE_ID_USUARIO + " INTEGER PRIMARY KEY, " +
-                ConstantesBaseDatos.TABLE_PASSWORD + " VARCHAR(20), " +
-                ConstantesBaseDatos.TABLE_NOMBRE + " VARCHAR(50), " +
-                ConstantesBaseDatos.TABLE_APATERNO + " VARCHAR(50), " +
-                ConstantesBaseDatos.TABLE_AMATERNO + " VARCHAR(50), " +
-                ConstantesBaseDatos.TABLE_SUPERVISOR + " BOOLEAN, " +
-                ConstantesBaseDatos.TABLE_ID_SUPER + " INTEGER" +
-                ")";
-        db.execSQL(queryCrearTablaCAT_USER);
 
         String queryCrearTablaCAT_Rubro = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_RUBRO + "(" +
                 ConstantesBaseDatos.TABLE_ID_RUBRO + " INTEGER PRIMARY KEY, " +

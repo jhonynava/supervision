@@ -9,14 +9,23 @@ public final class ConstantesBaseDatos {
     public static final String NAME_TABLE_AREA_SUPERVISION = "Area_Supervision";
     public static final String NAME_TABLE_OBSERVACION = "Observacion";
     public static final String NAME_TABLE_LIKES = "Likes";
+    public static final String NAME_TABLE_LISTA_SUPERVISIONES = "Lista_supervisiones";
 
-    // Tabla Usuario
+    // Tabla Lista Supervisiones
+    public static final String TABLE_ID_LISTA_SUPERVISION = "id_lista_supervision";
+    public static final String TABLE_NO_POLIZA = "no_poliza";
+    public static final String TABLE_TITULAR_POLIZA = "titular_poliza";
+    public static final String TABLE_REALIZA_POLIZA = "realiza_poliza";
+
+    // Tabla Usuarios
     public static final String TABLE_ID_USUARIO = "id_usuario";
     public static final String TABLE_CURP = "curp";
     public static final String TABLE_PASSWORD = "pass";
     public static final String TABLE_NOMBRE = "nombre";
     public static final String TABLE_APATERNO = "apellido_paterno";
     public static final String TABLE_AMATERNO = "apellido_materno";
+    public static final String TABLE_SUPERVISOR = "supervisor";
+    public static final String TABLE_ID_SUPERVISOR = "id_supervisor";
 
     //Tabla Area Supervision
     public static final String TABLE_ID_AREA_SUPERVISION = "id_area_supervision";
@@ -31,7 +40,6 @@ public final class ConstantesBaseDatos {
     //Tabla Like y Dislike
     public static final String TABLE_ID_LIKES = "id_likes";
     public static final String TABLE_VALOR = "valor";
-    public static final String TABLE_POSICION =  "posicion";
 
     // ----- Datos internos de la aplicación ------//
     public static final String NAME_TABLE_MAO = "CAT_Mao";
@@ -44,10 +52,6 @@ public final class ConstantesBaseDatos {
     public static final String TABLE_MAO  = "mao";
     public static final String TABLE_ALIAS = "alias";
     public static final String TABLE_ACTIVO = "activo";
-
-    //Tabla Usuarios
-    public static final String TABLE_SUPERVISOR = "supervisor";
-    public static final String TABLE_ID_SUPER = "id_super";
 
     //Tabla Rubro
     public static final String TABLE_ID_RUBRO = "id_rubro";
