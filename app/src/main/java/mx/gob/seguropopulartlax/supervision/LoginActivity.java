@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Boolean valor = sharedPreferences.getBoolean("savelogin", false);
 
-        if (valor == true) {
+        if (valor) {
             saveLoginCheckBox.setChecked(true);
             saveLogin = sharedPreferences.getBoolean("savelogin", true);
             user.setText(sharedPreferences.getString("username", null));

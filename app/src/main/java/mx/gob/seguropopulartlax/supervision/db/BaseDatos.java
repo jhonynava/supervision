@@ -23,13 +23,13 @@ public class BaseDatos extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         String queryCrearTablaListaSupervisiones = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_LISTA_SUPERVISIONES + "(" +
-                ConstantesBaseDatos.TABLE_ID_LISTA_SUPERVISION +  " INTEGER, " +
-                ConstantesBaseDatos.TABLE_ID_AREA_SUPERVISION +  
-                ConstantesBaseDatos.TABLE_ID_USUARIO +
-                ConstantesBaseDatos.TABLE_SUPERVISOR +
-                ConstantesBaseDatos.TABLE_NO_POLIZA +
-                ConstantesBaseDatos.TABLE_TITULAR_POLIZA +
-                ConstantesBaseDatos.TABLE_REALIZA_POLIZA +
+                ConstantesBaseDatos.TABLE_ID_LISTA_SUPERVISION +    " INTEGER PRIMARY KEY, " +
+                ConstantesBaseDatos.TABLE_ID_AREA_SUPERVISION +     " INTEGER, " +
+                ConstantesBaseDatos.TABLE_ID_USUARIO +              " INTEGER, " +
+                ConstantesBaseDatos.TABLE_ID_SUPERVISOR +           " TINYINT, " +
+                ConstantesBaseDatos.TABLE_NO_POLIZA +               " INTEGER, " +
+                ConstantesBaseDatos.TABLE_TITULAR_POLIZA +          " VARCHAR (250), " +
+                ConstantesBaseDatos.TABLE_REALIZA_POLIZA +          " VARCHAR (250)" +
                 ")";
 
         String queryCrearTablaAreaSupervision = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_AREA_SUPERVISION + "(" +
@@ -38,13 +38,14 @@ public class BaseDatos extends SQLiteOpenHelper {
                 ConstantesBaseDatos.TABLE_MODULO + " VARCHAR(50), " +
                 ConstantesBaseDatos.TABLE_ENCARGADO + " VARCHAR(150), " +
                 ConstantesBaseDatos.TABLE_FECHA + " DATE, " +
+                ConstantesBaseDatos.TABLE_ID_LISTA_SUPERVISION + " INTEGER, " +
                 "FOREIGN KEY (" + ConstantesBaseDatos.TABLE_ID_USUARIO + ") " +
                 "REFERENCES " + ConstantesBaseDatos.NAME_TABLE_USUARIO + "(" + ConstantesBaseDatos.TABLE_ID_USUARIO + ")" +
                 ")";
         db.execSQL(queryCrearTablaAreaSupervision);
 
         String queryCrearTablaObservacion = "CREATE TABLE " + ConstantesBaseDatos.NAME_TABLE_OBSERVACION + "(" +
-                ConstantesBaseDatos.TABLE_ID_OBSERVACION + " INTEGER PRIMARY KEY, " +
+                ConstantesBaseDatos.TABLE_ID_OBSERVACION + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 ConstantesBaseDatos.TABLE_ID_USUARIO + " INTEGER, " +
                 ConstantesBaseDatos.TABLE_OBSERVACION + " VARCHAR(250), " +
                 ConstantesBaseDatos.TABLE_ID_AREA_SUPERVISION + " INTEGER, " +
@@ -106,7 +107,7 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXIST " + ConstantesBaseDatos.NAME_TABLE_USUARIO);
+        db.execSQL("DROP TABLE IF EXIST" + ConstantesBaseDatos.NAME_TABLE_USUARIO);
         db.execSQL("DROP TABLE IF EXIST " + ConstantesBaseDatos.NAME_TABLE_AREA_SUPERVISION);
         db.execSQL("DROP TABLE IF EXIST " + ConstantesBaseDatos.NAME_TABLE_RUBRO);
         db.execSQL("DROP TABLE IF EXIST " + ConstantesBaseDatos.NAME_TABLE_VARIABLE);
