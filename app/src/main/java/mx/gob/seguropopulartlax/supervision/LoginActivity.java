@@ -214,15 +214,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public class cargarInformarcion extends AsyncTask<Void, Void, Boolean>{
-
-
-        @Override
-        protected Boolean doInBackground(Void... voids) {
-            return null;
-        }
-    }
-
     private void mostrarProgreso(final boolean show) {
         int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
 

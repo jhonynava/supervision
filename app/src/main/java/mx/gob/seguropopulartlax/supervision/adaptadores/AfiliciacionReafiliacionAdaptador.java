@@ -32,8 +32,7 @@ public class AfiliciacionReafiliacionAdaptador extends RecyclerView.Adapter<Afil
 
     ArrayList<VariablesPOJO> variables;
     public Activity activty;
-    ConstructorVariables
-            constructorVariables;
+    ConstructorVariables constructorVariables;
 
     @Override
     public int getItemViewType(int position) {
